@@ -4,9 +4,6 @@ from marsdata import views as marsviews
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'marsweatherdata.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', marsviews.home, name="home"),
