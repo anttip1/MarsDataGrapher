@@ -1,0 +1,42 @@
+/*!
+ * Start Bootstrap - 2 Col Portfolio HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	border: 2px solid #a1a1a1;
+	border-radius: 15px;
+	padding-top: 20px;
+    margin-bottom: 25px;
+    
+}
+
+.marschart {
+	height: 400px;
+}
+
+.marschart p {
+	font-size: 30px;
+	text-align: center;
+	color: #a1a1a1;
+
+
+}
+
+.marschartCaption {
+	padding: 10px;
+}
+
+
+footer {
+    margin: 50px 0;
+}
