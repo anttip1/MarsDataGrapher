@@ -16,10 +16,8 @@ function refreshData() {
   xmlhttp.send();  
 }
 
-//google.setOnLoadCallback(drawChart);
-function drawChart(marsdata) {
-  console.log(marsdata);
 
+function drawChart(marsdata) {
   var temp_data = new google.visualization.DataTable();
   temp_data.addColumn('date', 'Day');
   temp_data.addColumn('number', 'Maximum Temperature');
@@ -29,14 +27,11 @@ function drawChart(marsdata) {
   press_data.addColumn('date', 'Day');
   press_data.addColumn('number', 'Pressure');
   
-
-  
   $.each(marsdata, function(i, point) {
     temp_data.addRow([new Date(point.terrestrial_date), point.max_temp, point.min_temp]);
     press_data.addRow([new Date(point.terrestrial_date), point.pressure]);
     
   })
-  //console.log(temp_data);
   var temp_options = {
     title: 'Maximum and minimum temperatures (Celsius)',
     curveType: 'function',
@@ -51,11 +46,8 @@ function drawChart(marsdata) {
     hAxis: { format: 'd.M.yy'},
   };
 
-
   var temp_chart = new google.visualization.LineChart(document.getElementById('temp_chart'));
   var press_chart = new google.visualization.LineChart(document.getElementById('press_chart'));
-
-
   temp_chart.draw(temp_data, temp_options);
   press_chart.draw(press_data, press_options);
 }
